@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-file-picker" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>FilePicker</name>
+    <js-module name="FilePicker" src="www/FilePicker.js">
+        <clobbers target="cordova.plugins.FilePicker"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        </config-file>
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="FilePicker">
+                <param name="android-package" value="com.handsmap.filepicker.FilePicker"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/FakeR.java" target-dir="src/com/handsmap/filepicker"/>
+        <source-file src="src/android/FilePicker.java" target-dir="src/com/handsmap/filepicker"/>
+        <source-file src="src/android/java/LFilePicker.java" target-dir="src/com/handsmap/filepicker"/>
+        <source-file src="src/android/java/adapter/PathAdapter.java" target-dir="src/com/handsmap/filepicker/adapter"/>
+        <source-file src="src/android/java/filter/LFileFilter.java" target-dir="src/com/handsmap/filepicker/filter"/>
+        <source-file src="src/android/java/model/ParamEntity.java" target-dir="src/com/handsmap/filepicker/model"/>
+        <source-file src="src/android/java/ui/LFilePickerActivity.java" target-dir="src/com/handsmap/filepicker/ui"/>
+        <source-file src="src/android/java/utils/CloseUtils.java" target-dir="src/com/handsmap/filepicker/utils"/>
+        <source-file src="src/android/java/utils/CompositeFilter.java" target-dir="src/com/handsmap/filepicker/utils"/>
+        <source-file src="src/android/java/utils/Constant.java" target-dir="src/com/handsmap/filepicker/utils"/>
+        <source-file src="src/android/java/utils/FileComparator.java" target-dir="src/com/handsmap/filepicker/utils"/>
+        <source-file src="src/android/java/utils/FileUtils.java" target-dir="src/com/handsmap/filepicker/utils"/>
+        <source-file src="src/android/java/utils/MemoryConstant.java" target-dir="src/com/handsmap/filepicker/utils"/>
+        <source-file src="src/android/java/utils/StringUtils.java" target-dir="src/com/handsmap/filepicker/utils"/>
+        <source-file src="src/android/java/widget/EmptyRecyclerView.java" target-dir="src/com/handsmap/filepicker/widget"/>
+
+        <!-- resource -->
+        <source-file src="src/android/resource/drawable/back_bg.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/resource/drawable/btn_bg.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/resource/drawable/item_bg_selector.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/resource/drawable-v21/back_bg.xml" target-dir="res/drawable-v21"/>
+        <source-file src="src/android/resource/drawable-v21/btn_bg.xml" target-dir="res/drawable-v21"/>
+
+        <source-file src="src/android/resource/layout/activity_lfile_picker.xml" target-dir="res/layout"/>
+        <source-file src="src/android/resource/layout/emptyview.xml" target-dir="res/layout"/>
+        <source-file src="src/android/resource/layout/listitem.xml" target-dir="res/layout"/>
+
+        <source-file src="src/android/resource/values/colors.xml" target-dir="res/values"/>
+        <source-file src="src/android/resource/values/dimens.xml" target-dir="res/values"/>
+
+        <source-file src="src/android/resource/mipmap-xhdpi/dir_back.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/back.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/backincostyleone.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/backincostyletwo.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/emptyimg.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/file_style_blue.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/file_style_green.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/file_style_yellow.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/folder_style_blue.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/folder_style_green.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/folder_style_yellow.png" target-dir="res/mipmap-xhdpi"/>
+        <source-file src="src/android/resource/mipmap-xhdpi/folder_style_yellow2.png" target-dir="res/mipmap-xhdpi"/>
+
+    </platform>
+</plugin>
