@@ -1,5 +1,7 @@
 # FilePicker - 文件选择器
 
+版权声明：此项目基于开源库：[LFilePicker](https://github.com/leonHua/LFilePicker) 修改而来. 特此感谢LFilePicker作者。
+
 支持平台
 
 - Android
