@@ -16,6 +16,10 @@ cordova plugin add /xxxx/xxx/FilePicker
 # 添加样式
 styles.xml中添加resources目录下styles.xml中的样式
 
+# 添加依赖
+build.gradle
+compile 'com.android.support:appcompat-v7:22.2.0'
+compile 'com.android.support:recyclerview-v7:22.2.0'
 ```
 
 默认配置
