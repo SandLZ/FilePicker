@@ -1,6 +1,6 @@
 {
   "name": "file-picker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Plugin for file picker.",
   "main": "FilePicker.js",
   "scripts": {
